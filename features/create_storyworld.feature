@@ -4,6 +4,8 @@ Feature: Generate TADs version of story
   there is a cottage.  Inside the cottage is a room.  In the room is a table.  On
   the table are three bowls of porrage. One bowl of porrage is hot.  
   One bowl of porrage is cold.  One bowl is the right temperature.
+  
+  # TODO The last definition should be in aruba - not sure why it isn't comming through
 
   Scenario: Generate basic story
     Given a file named "story.txt" with:
@@ -25,5 +27,4 @@ Feature: Generate TADs version of story
         pours in from a passage to the south. "
         south = startroom
       ;      
-      """  
-    
+      """
