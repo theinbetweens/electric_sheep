@@ -7,19 +7,22 @@ Feature: Generate TADs version of story
   
   # TODO The last definition should be in aruba - not sure why it isn't comming through
 
+  @announce @slow_process
   Scenario: Generate basic story
     Given a file named "story.txt" with:
       """
       In the room there is a table.  On the table is a lamp.
       """
-    And a file named "electric_sheep.rb" with:
+    And a file named "init.rb" with:
       """
+      $LOAD_PATH.unshift File.expand_path( File.join('..','..','lib') )
+      
       require 'electric_sheep'
       
-      ElectricSheep.interpret('story.txt')
+      puts ElectricSheep::Builder.interpret('story.txt')
       """
-    When I run "electric_sheep.rb"
-    Then the file "output.txt" should contain:
+    When I run `ruby init.rb`
+    Then the output should contain:
       """
       cave: room
         sdesc = "Cave"
