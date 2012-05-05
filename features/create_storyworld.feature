@@ -24,10 +24,11 @@ Feature: Generate TADs version of story
     When I run `ruby init.rb`
     Then the output should contain:
       """
+
       cave: room
         sdesc = "Cave"
         ldesc = "You're inside a dark and musty cave. Sunlight
         pours in from a passage to the south. "
         south = startroom
-      ;      
+      ;
       """

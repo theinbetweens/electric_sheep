@@ -3,7 +3,6 @@ module ElectricSheep
   class Builder
     
     def self.interpret(file_name)
-      a = 
       %q{
       cave: room
         sdesc = "Cave"
@@ -11,8 +10,7 @@ module ElectricSheep
         pours in from a passage to the south. "
         south = startroom
       ;
-      }
-      a
+      }.unindent
     end
     
   end

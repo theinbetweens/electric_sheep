@@ -3,4 +3,5 @@ group :development, :test, :cucumber do
   gem 'aruba', '0.4.11'
   gem "cucumber", '1.1.3'
   gem "rspec", "~>2.7.0"
+  gem "awesome_print"
 end  
