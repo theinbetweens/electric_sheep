@@ -1,6 +1,6 @@
 # ElectricSheep
 
-TODO: Write a gem description
+Allows you to use ruby to construct a very basic TADs story file.
 
 ## Installation
 
@@ -18,7 +18,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+	require 'electric_sheep'
+
+	game = ElectricSheep::Game.new(
+		:name => 'Blade Runner', :byline => 'by Philip K. Dick',
+		:desc => 'Dystopian future where replicants walk amoungst us',
+		:version => '1',
+		:authorEmail => 'Bob <bob@example.com>'
+	)
+
+	first_room = ElectricSheep::Room.new('Starting Room')
+	first_room.desc = %q{This is the boring starting rooms.}
+
+	me = ElectricSheep::Actor.new('me')
+	me.location = first_room
+
+	game.initialPlayerChar = me
+
+	game.rooms << first_room
+	game.actors << me
+
+	puts game.build_tads
 
 ## Contributing
 

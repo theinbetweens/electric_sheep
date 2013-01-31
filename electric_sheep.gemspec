@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = ElectricSheep::VERSION
   gem.authors       = ["theinbetweens"]
   gem.email         = ["wsangster@theinbetweens.co.uk"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Allows you to use ruby to build TADs *.t files}
+  gem.summary       = %q{Allows you to use ruby to build TADs *.t files}
   gem.homepage      = ""
 
   # gem.add_runtime_dependency 'cucumber', '>= 1.1.1'
