@@ -11,6 +11,15 @@ module ElectricSheep
       end
       
     end
+
+    describe '.build' do
+
+    	it 'should generate a game directory on build' do
+    		ElectricSheep::Game.new(:name => 'Blade Runner')
+    		File.exists?('BladeRunner').should == true
+    	end
+
+    end
     
   end
   

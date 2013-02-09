@@ -12,6 +12,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Allows you to use ruby to build TADs *.t files}
   gem.homepage      = ""
 
+  gem.add_dependency "activesupport", ">= 3.2.0"
+
   # gem.add_runtime_dependency 'cucumber', '>= 1.1.1'
   gem.add_development_dependency 'cucumber', '>= 1.1.1'
   gem.add_development_dependency 'aruba', '>= 0.4.11'  
