@@ -4,6 +4,8 @@ module ElectricSheep
   class Game
 
     #attr_accessor :initialPlayerChar, :rooms, :actors
+    attr_accessor :rooms, :actors, :name
+
     include Models::ActsAsStory
 
     def initialize(options = {} )
@@ -16,6 +18,7 @@ module ElectricSheep
       end
       @rooms = []
       @actors = []
+      @name = @values[:name]
     end
 
   end

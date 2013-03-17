@@ -4,7 +4,7 @@ module ElectricSheep
     module ActsAsRoom
       #extend ActiveSupport::Concern
 
-      attr_accessor :desc
+      #attr_accessor :desc
 
       def write
         output = []
