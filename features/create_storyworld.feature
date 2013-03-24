@@ -38,6 +38,8 @@ Feature: Generate TADs version of story
     When I run `ruby example_generator.rb`
     Then the output should contain exactly:
       """
+      #include <adv3.h>
+      #include <en_us.h>
       gameMain: GameMainDef
         initialPlayerChar = me
       ;

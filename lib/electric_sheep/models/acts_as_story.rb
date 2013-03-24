@@ -30,11 +30,11 @@ module ElectricSheep
           output += actors.first.write
         end
 
-        # TODO This a quick hack so it can compile
-        output += "\n"
-        output += 'me: Actor'
-        output += "\n"
-        output += ';'
+        # # TODO This a quick hack so it can compile
+        # output += "\n"
+        # output += 'me: Actor'
+        # output += "\n"
+        # output += ';'
 
         output
       end   
