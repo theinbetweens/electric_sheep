@@ -41,15 +41,15 @@ module ElectricSheep
 
       def t_file_name
         #name.downcase.gsub(/\s+/,'')+'.t'
-        name.split(/\s+/).collect(&:capitalize).join('')+'.t'
+        camel_case_name+'.t'
       end   
 
       def t3m_file_name
         #name.downcase.gsub(/\s+/,'')+'.t3m'
-        name.split(/\s+/).collect(&:capitalize).join('')+'.t3m'
+        camel_case_name+'.t3m'
       end
 
-      def camelcase_name
+      def camel_case_name
         name.split(/\s+/).collect(&:capitalize).join('')
       end
 
@@ -58,10 +58,10 @@ module ElectricSheep
         str << '-D LANGUAGE=en_us'
         str << '-D MESSAGESTYLE=neu'
         str << '-Fy obj -Fo obj'
-        str << "-o #{camelcase_name}.t3"
+        str << "-o #{camel_case_name}.t3"
         str << '-lib system'
         str << '-lib adv3/adv3'
-        str << "-source #{camelcase_name}"
+        str << "-source #{camel_case_name}"
         str.join("\n")
       end
 

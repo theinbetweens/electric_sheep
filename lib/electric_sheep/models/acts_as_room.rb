@@ -8,7 +8,7 @@ module ElectricSheep
 
       def write
         output = []
-        output << "firstRoom: Room '#{@name}'"
+        output << "firstRoom: Room '#{name}'"
         output << %Q{  "#{desc}"}
         output << ";"
         output.join("\n")

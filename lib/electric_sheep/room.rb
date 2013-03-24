@@ -4,7 +4,7 @@ module ElectricSheep
 
     include Models::ActsAsRoom
 
-    attr_accessor :desc    
+    attr_accessor :desc, :name    
 
   	def initialize(name,options = {})
   		@name = name
