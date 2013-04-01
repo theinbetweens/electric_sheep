@@ -25,6 +25,18 @@ module ElectricSheep
         # TODO Need a nicer way to compare printed output ignoring indentation
       end
 
+      it 'should declare a connection to a north room' do
+        outside_cave = ElectricSheep::Room.new('Outside Cave')
+        outside_cave.desc = %q{You're standing in the bright sunlight just outside of a large, dark.}
+
+        cave = ElectricSheep::Room.new('Cave')
+        cave.desc = %q{You're inside a dark and musty cave. Sunlight pours in from a passage to the south. }
+
+        outside_cave.north = cave  
+        outside_cave.write.should include("north = cave")              
+        outside_cave.write.should include(%q{desc = "You're standing in the bright sunlight just outside of a large, dark.})
+      end
+
     end
 
     describe '#tad_object_name' do

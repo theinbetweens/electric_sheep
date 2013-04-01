@@ -9,9 +9,20 @@ module ElectricSheep
       def write
         output = []
         output << "#{tad_object_name}: Room '#{name}'"
-        output << %Q{  "#{desc}"}
+        if any_rooms_connected?
+          output << %Q{  desc = "#{desc}"}
+          unless north.nil?
+            output << %Q{  north = #{north.tad_object_name}}
+          end
+        else
+          output << %Q{  "#{desc}"}
+        end
         output << ";"
         output.join("\n")
+      end
+
+      def any_rooms_connected?
+        ![north,south,east,west].all?(&:nil?)
       end
 
       def tad_object_name
