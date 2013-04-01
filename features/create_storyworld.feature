@@ -52,7 +52,7 @@ Feature: Generate TADs version of story
         version = '1'
       ;
 
-      firstRoom: Room 'Starting Room'
+      startingRoom: Room 'Starting Room'
         "This is the boring starting rooms."
       ;
 

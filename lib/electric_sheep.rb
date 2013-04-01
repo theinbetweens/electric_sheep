@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string'
+
 require "electric_sheep/version"
 
 require 'core/string'
