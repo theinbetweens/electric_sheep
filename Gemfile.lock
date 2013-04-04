@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    electric_sheep (0.0.1)
+    electric_sheep (0.0.2)
       activesupport (>= 3.2.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (3.2.11)
-      i18n (~> 0.6)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
       multi_json (~> 1.0)
     aruba (0.5.1)
       childprocess (~> 0.3.6)
@@ -28,7 +28,7 @@ GEM
       json (>= 1.7.6)
     i18n (0.6.1)
     json (1.7.6)
-    multi_json (1.5.0)
+    multi_json (1.7.2)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)

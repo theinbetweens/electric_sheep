@@ -3,6 +3,12 @@ module ElectricSheep
 
     module ActsAsActor
 
+      def self.included klass
+        klass.class_eval do
+          include ActsAsTadsObject
+        end
+      end      
+
       def write
        # %Q{
       #   #{@name}: Actor
